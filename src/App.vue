@@ -15,14 +15,14 @@
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <g id="gopher">
-            <Foot></Foot>
-            <Hand></Hand>
+            <Foot :color="foot_color"></Foot>
+            <Hand :color="hand_color"></Hand>
             <GBody
               :color="body_color"
               :lineColor="body_line_color"
             ></GBody>
             <Tooth></Tooth>
-            <Eye></Eye>
+            <Eye :color="eye_color"></Eye>
             <Nose></Nose>
           </g>
         </svg>
@@ -114,12 +114,9 @@ export default {
     return {
       body_color: "#69D7E2",
       body_line_color: "#000000",
-      hand1_color: "#F6D2A2",
-      hand2_color: "#F6D2A2",
-      foot1_color: "#F6D2A2",
-      foot2_color: "#F6D2A2",
-      eye1_color: "#FFFFFF",
-      eye2_color: "#FFFFFF"
+      hand_color: "#F6D2A2",
+      foot_color: "#F6D2A2",
+      eye_color: "#FFFFFF",
     };
   },
   components: {
@@ -132,16 +129,16 @@ export default {
   },
   methods: {
     changeColor1: function(color) {
-      this.hand1_color = color;
+      this.hand_color = color;
     },
     changeColor2: function(color) {
-      this.hand2_color = color;
+      this.hand_color = color;
     },
     changeColor3: function(color) {
-      this.foot1_color = color;
+      this.foot_color = color;
     },
     changeColor4: function(color) {
-      this.foot2_color = color;
+      this.foot_color = color;
     },
     changeColor5: function(color) {
       this.body_color = color;
@@ -150,10 +147,10 @@ export default {
       this.body_line_color = color;
     },
     changeColor7: function(color) {
-      this.eye1_color = color;
+      this.eye_color = color;
     },
     changeColor8: function(color) {
-      this.eye2_color = color;
+      this.eye_color = color;
     }
   }
 };
